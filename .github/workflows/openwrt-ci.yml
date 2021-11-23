@@ -5,13 +5,20 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-CI
+name: 云编译
 
 on:
-  schedule:
-    - cron: 0 20 * * *
+  push:
+    branches: 
+      - master
+    schedule:
+      - cron: 30 8 5,15,25 * * 
   release:
-    types: [published]
+    types: [published] 
+
+jobs:
+
+  merge:
 
 jobs:
 
