@@ -11,14 +11,10 @@ on:
   push:
     branches: 
       - master
-    schedule:
-      - cron: 30 8 5,15,25 * * 
+  # schedule:
+  #   - cron: 0 20 * * *
   release:
-    types: [published] 
-
-jobs:
-
-  merge:
+    types: [published]
 
 jobs:
 
